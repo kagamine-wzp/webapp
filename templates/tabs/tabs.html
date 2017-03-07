@@ -1,0 +1,14 @@
+<ion-tabs class="tabs-icon-top" id="tabs">
+    <ion-tab title="首页" icon-on="ion-ios-home balanced" icon-off="ion-ios-home-outline" ui-sref="tabs.home">
+        <ion-nav-view name="tab-home"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="分类" icon-on="ion-ios-cart balanced" icon-off="ion-ios-cart-outline" ui-sref="tabs.menuList">
+        <ion-nav-view name="tab-menuList"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="我的本来" icon-on="ion-ios-person balanced" icon-off="ion-ios-person-outline" ui-sref="tabs.user">
+        <ion-nav-view name="tab-user"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="购物车" icon-on="ion-ios-cart balanced" icon-off="ion-ios-cart-outline" badge="total()" badge-style="badge-assertive" ui-sref="tabs.cart">
+        <ion-nav-view name="tab-cart"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

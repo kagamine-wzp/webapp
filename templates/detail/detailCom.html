@@ -1,0 +1,30 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar>
+        <div class="row" id="detailList">
+            <a class="col col-20" href="javascript:;" ng-click="back()"><i class="ion-chevron-left iback-details"></i></a>
+            <a class="col col-20" href="#/tabs/detail?name={{name}}">商品</a>
+            <a class="col col-20" href="#/tabs/detailText?name={{name}}">详情</a>
+            <a class="col col-20">评价</a>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="clearfix row">
+            <div class="col col-75">
+                <input id="sendInput" ng-model="message.action"/>
+            </div>
+            <div class="col col-25">
+                <button type="button" ng-click="send()" class="sendBtn">发表评论</button>
+            </div>
+        </div>
+        <div class="list">
+            <a class="item item-avatar-left" href="javascript:;" ng-repeat="item in msg" ng-click="aaaaa()">
+                <img ng-src="{{item.picture}}">
+                <div class="clearfix">
+                    <div class="userName">{{item.name}}</div>
+                    <div class="sendTime">{{item.date | date:"yyyy-MM-dd"}}</div>
+                </div>
+                <p id="sendText">{{item.text}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

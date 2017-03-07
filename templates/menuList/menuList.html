@@ -1,0 +1,33 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar id="listtitle">
+        <div class="search">
+            <input type="text" value="坚果">
+            <a href="#"><i class="ion ion-ios-search"></i></a>
+        </div>
+    </ion-header-bar>
+    <ion-content id="menulist" overflow-scroll="true">
+        <div class="aside">
+            <ul>
+                <li class="active"><a href="javascript:;" ng-click="keyword('all')">镇店之宝</a> </li>
+                <li><a href="javascript:;" ng-click="keyword('新鲜水果')">新鲜水果</a> </li>
+                <li><a href="javascript:;" ng-click="keyword('粮油蛋奶')">粮油蛋奶</a> </li>
+                <li><a href="javascript:;" ng-click="keyword('零食冲调')">零食冲调</a> </li>
+                <li><a href="javascript:;" ng-click="keyword('肉类家禽')">肉类家禽</a> </li>
+                <li><a href="javascript:;" ng-click="keyword('厨房用品')">厨房用品</a> </li>
+            </ul>
+        </div>
+        <div class="classify">
+            <ul>
+                <li ng-repeat="item in product" ng-class="$odd? 'rightlist':''">
+                    <a href="#/tabs/detail?name={{item.name}}">
+                        <div class="thumbnail"><img ng-src="{{item.imgsrc}}"> </div>
+                        <h4>{{item.name}}</h4>
+                        <p>{{item.price | currency:'￥'}}</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    </ion-content>
+</ion-view>

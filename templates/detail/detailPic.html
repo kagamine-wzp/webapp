@@ -1,0 +1,70 @@
+<ion-view hide-nav-bar="true">
+    <ion-header-bar>
+        <div class="row" id="detailList">
+            <a class="col col-20 backBtn" href="javascript:;" ng-click="back()"><i class="ion-chevron-left iback-details"></i> </a>
+            <a class="col col-20 navBtn ac">商品</a>
+            <a class="col col-20 navBtn">详情</a>
+            <a class="col col-20 navBtn">评价</a>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+            <div class="detailCon">
+                <div class="card">
+                    <ion-item class="item-image">
+                        <img ng-src="{{product.imgsrc}}"/>
+                    </ion-item>
+                    <ion-item class="item clearfix" style="padding: 10px 10px 15px">
+                        <h2 class="proName">{{product.name}}</h2>
+                        <h2 class="proPrice" style="margin-top: 15px;">{{product.price | currency:"￥"}}</h2>
+                    </ion-item>
+                    <div class="callout">
+                        <a href="javascript:;" class="clearfix">
+                            <p style="margin: 0">全面质检</p>
+                            <p style="margin: 0">资深买手</p>
+                        </a>
+                    </div>
+                    <div style="text-align: center;margin-top: 5px;">
+                        <button class="button" ng-click="add(product)" id="buyBtn">加入购物车</button>
+                        <button class="button" ng-click="add(product)" id="buyBtn2">立即购买</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="detailCon" style="display: none;">
+                <div class="detail">
+                    <div><img src="images/detailsp_tit02.gif"></div>
+                    <div>
+                        <img src="images/03a83d8a-8bb3-43ba-b254-cfb8b8e9e062.jpg">
+                        <img src="images/8e61d209-3b5a-478f-84e9-0335361b19bc.jpg">
+                        <img src="images/867ab33c-6408-4295-88c3-4ee1c70f84e8.jpg">
+                        <img src="images/99acf49b-71a9-4cd2-83ee-9715bd132eb5.jpg">
+                        <img src="images/cfe26c25-c537-4f99-9b47-7751883c102e.jpg">
+                        <img src="images/929281a5-bb43-42ac-b2fb-c600d2ad44e4.jpg">
+                        <img src="images/99f12539-ec35-44ab-8ad6-38ae93e7e45e.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="detailCon" style="display: none;">
+                <div class="clearfix row">
+                    <div class="col col-75">
+                        <input id="sendInput" ng-model="message.action"/>
+                    </div>
+                    <div class="col col-25">
+                        <button type="button" ng-click="send()" class="sendBtn">发表评论</button>
+                    </div>
+                </div>
+                <div class="list">
+                    <a class="item item-avatar-left" href="javascript:;" ng-repeat="item in msg" ng-click="aaaaa()">
+                        <img ng-src="{{item.picture}}">
+                        <div class="clearfix">
+                            <div class="userName">{{item.name}}</div>
+                            <div class="sendTime">{{item.date | date:"yyyy-MM-dd"}}</div>
+                        </div>
+                        <p id="sendText">{{item.text}}</p>
+                    </a>
+                </div>
+            </div>
+
+
+    </ion-content>
+</ion-view>
